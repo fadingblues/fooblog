@@ -1,0 +1,20 @@
+{
+  "name": "fooblog",
+  "version": "0.0.1",
+  "authors": [
+    "fadingblues <davide.parisi@gmx.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "_sass/vendors",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "inuit-starter-kit": "~0.2.9",
+    "inuitcss": "~5.0.1"
+  }
+}

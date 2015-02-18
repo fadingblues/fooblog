@@ -12,3 +12,11 @@ github_username:  jekyll
 
 # Build settings
 markdown: kramdown
+
+exclude: [
+	".bowerrc",
+	"bower.json",
+	"package.json",
+	"Gruntfile.coffee",
+	"node_modules"
+]
