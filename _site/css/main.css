@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700);
 @import url(http://fonts.googleapis.com/css?family=Oleo+Script:400,700);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700);
 @import url(http://fonts.googleapis.com/css?family=Source+Code+Pro);
 @import url(http://fonts.googleapis.com/css?family=Inconsolata);
 pre {
@@ -2987,11 +2988,28 @@ label, .label {
 .posts--list {
   list-style: none;
   margin-left: 0;
+  border: 0 solid #ccc;
   border-top-width: 1px; }
   .posts--list li {
     border: 0 solid #ccc;
     border-bottom-width: 1px;
-    padding: 12px; }
+    padding: 10px; }
+    .posts--list li a {
+      text-decoration: none;
+      color: #B46565; }
+
+.posts--date {
+  color: #aaa;
+  margin-bottom: 5px; }
+
+.post--meta {
+  color: #666; }
+
+.post--title {
+  color: #B46565; }
+
+.post--content p {
+  line-height: 1.5; }
 
 .header {
   margin-bottom: 24px; }
@@ -3061,3 +3079,9 @@ body {
 html {
   padding: 20px;
   padding-bottom: 0; }
+
+a {
+  text-decoration: none;
+  color: #B46565; }
+  a :hover {
+    color: #DB9090; }

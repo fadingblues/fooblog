@@ -20,7 +20,8 @@ module.exports = (grunt) ->
 				files: [
 					'_layouts/*.html',
 					'_includes/*.html',
-					'css/main.css'
+					'css/main.css',
+					'index.html'
 				]
 				tasks: ['jekyll']
 		# Keep browser in sync
