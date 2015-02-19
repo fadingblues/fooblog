@@ -6,12 +6,16 @@
     "npm": "1.2.x"
   },
   "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-jekyll": "^0.4.2",
-    "grunt-contrib-uglify": "*",
-    "grunt-contrib-copy": "*",
     "bower": "*",
+    "grunt": "^0.4.5",
+    "grunt-autoprefixer": "^2.2.0",
+    "grunt-browser-sync": "^2.0.0",
+    "grunt-contrib-copy": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "^0.6.1",
     "grunt-exec": "*",
+    "grunt-jekyll": "^0.4.2",
+    "grunt-sass": "^0.18.0",
     "matchdep": "^0.3.0"
   }
 }

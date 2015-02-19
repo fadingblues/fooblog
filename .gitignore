@@ -1,3 +1,5 @@
 .jekyll
 .sass-cache
 /node_modules/
+/sass/vendors/
+/_snippets/
