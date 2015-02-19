@@ -1,9 +1,10 @@
 // _highlight.scss
 @import url(http://fonts.googleapis.com/css?family=Source+Code+Pro);
+@import url(http://fonts.googleapis.com/css?family=Inconsolata);
 
-code {
-	font-family: "Source Code Pro", "Courier New", monospace
-}
+// code {
+// 	font-family: 'Inconsolata', monospace;
+// }
 pre {
 	padding: 5px 10px;
 	word-wrap: break-word
@@ -36,7 +37,7 @@ p>code::before {
 .highlight {
 	background-color: #fdf6e3;
 	color: #586e75;
-	padding: 10px;
+	padding-left: .5em;
 }
 .highlight .c {
 	color: #93a1a1
