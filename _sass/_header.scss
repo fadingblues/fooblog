@@ -1,0 +1,77 @@
+// Local variables
+$header--profile-pic-dimensions: 80px;
+
+// Styles
+.header {
+	margin-bottom: 24px;
+}
+.header--profile-pic {
+	width: $header--profile-pic-dimensions;
+	height: $header--profile-pic-dimensions;
+	margin: 0 auto;
+	margin-bottom: 12px;
+	a {
+		display: block;
+	}
+	img {
+		width: 80px;
+		height: 80px;
+		-webkit-border-radius: 40px;
+		-moz-border-radius: 40px;
+		-ms-border-radius: 40px;
+		-o-border-radius: 40px;
+		border-radius: 40px;
+	}
+}
+.header--title {
+	color: $main--typography-color;
+	font-family: 'Oleo Script', sans-serif;
+	font-weight: 700;
+	text-align: center;
+	margin-bottom: 6px;
+	a,
+	a:focus,
+	a:hover {
+		color: $main--typography-color;
+		text-decoration: none;
+	}
+}
+
+.header--tagline {
+	color: #666;
+	text-align: center;
+	h3 {
+		font-size: 20px;
+		font-size: 1.2rem;
+		font-weight: 100;
+		line-height: 1;
+	}
+}
+.header--nav {
+	text-align: center;
+	font-weight: 700;
+	color: $main--typography-color;
+	a {
+		text-decoration: none;
+		color: $main--typography-color;
+	}
+	li::before { content: " ~ "; }
+	li:first-child::before { content: ""; }
+	// li:last-child::after { content: " | : : ."; }
+}
+.header--nav,
+.nav {
+	list-style: none;
+	margin-left: 0;
+	li,
+	li>a {
+		display: inline-block;
+		*display: inline;
+		zoom: 1;
+		:focus,
+		:hover {
+			text-decoration: none;
+			color: #FFAF38;
+		}
+	}
+}

@@ -1,0 +1,22 @@
+.posts {
+	margin-bottom: 24px;
+}
+
+.posts--title {
+	h3 {
+		font-size: 24px;
+		font-size: 1.5rem;
+		line-height: 1;
+	}
+}
+
+.posts--list,{
+	list-style: none;
+	margin-left: 0;
+	border-top-width: 1px;
+	li {
+		border: 0 solid #ccc;
+		border-bottom-width: 1px;
+		padding: 12px;
+	}
+}

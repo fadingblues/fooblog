@@ -1,0 +1,47 @@
+// _vars.scss
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700);
+@import url(http://fonts.googleapis.com/css?family=Oleo+Script:400,700);
+
+$debug-mode:        false!default;
+$global-border-box: true!default;
+
+// Base Typografy
+$base-font-size:    16px!default;
+$base-line-height:  24px!default;
+$base-font-family: 'Roboto Slab', serif;
+
+// Default color for borders, horozontal rules etc.
+$base-ui-color: #EEE;
+
+// Responsiveness
+$responsive:        true!default;
+
+// color and font family for the brand object
+$brand-face: 'Helvetica Neue', sans-serif;
+$brand-color: #87A3BB;
+
+// push classes to move grid items
+$push: true;
+
+// Breakpoints
+$lap-start:         481px!default;
+$desk-start:        1024px!default;
+$desk-wide-start:   1200px!default;
+
+// grid
+$use-grids: true;
+
+// Nav abstraction (throw lists into horizontal mode)
+$use-nav: true;
+
+// Island and islet objects
+$use-island: true;
+
+// buttons toolkit
+$use-beautons: true;
+
+$base-spacing-unit: $base-line-height!default;
+$half-spacing-unit: $base-spacing-unit / 2!default;
+$line-height-ratio: $base-line-height / $base-font-size;
+
+$main--typography-color: #B46565;
