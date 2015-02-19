@@ -3,4 +3,17 @@
 ---
 @charset "utf-8";
 // Import partials from `sass_dir` (defaults to `_sass`)
+@import "vars";
 @import "vendors/inuitcss/inuit";
+@import "posts";
+@import "header";
+
+body{
+	max-width: 700px;
+	margin: 0 auto;
+}
+
+html {
+	padding: 20px;
+	padding-bottom: 0;
+}

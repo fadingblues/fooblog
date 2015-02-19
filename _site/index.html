@@ -6,23 +6,48 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Your awesome title</title>
-  <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
-">
+  <title>FooBar</title>
+  <meta name="description" content="A Foo blog. Well, not so foo.">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="http://yourdomain.com/">
-  <link rel="alternate" type="application/rss+xml" title="Your awesome title" href="http://yourdomain.com/feed.xml" />
+  <link rel="alternate" type="application/rss+xml" title="FooBar" href="http://yourdomain.com/feed.xml" />
 </head>
 
 
   <body>
 
-    <header class="site-header">
+    <div class="header">
+  <div class="header--profile-pic">
+    <img src="http://lorempixel.com/g/80/80/people" alt="Profile Picture">
+  </div>
+  <h1 class="header--title"><a href="/">FooBar</a></h1>
+  <div class="header--tagline">
+    <h3>A Foo blog. Well, not so foo.</h3>
+  </div>
+  <ul class="header--nav">
+    
+      
+      <li><a class="header--nav-link" href="/about/">About</a></li>
+      
+    
+      
+    
+      
+    
+      
+    
+    <li><a class="header--nav-link" href="/feed.xml">RSS</a></li>
+  </ul>
+</div>
+
+
+
+<!-- <header class="header">
 
   <div class="wrapper">
 
-    <a class="site-title" href="/">Your awesome title</a>
+    <h1><a class="brand" href="/">FooBar</a></h1>
 
     <nav class="site-nav">
       <a href="#" class="menu-icon">
@@ -46,45 +71,38 @@
 
   </div>
 
-</header>
+</header> -->
 
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
+        <section class="posts">
+  <ul class="posts--list">
     
       <li>
-        <span class="post-meta">Feb 18, 2015</span>
-
-        <h2>
-          <a class="post-link" href="/jekyll/update/2015/02/18/welcome-to-jekyll.html">Welcome to Jekyll!</a>
-        </h2>
+        <a href="/jekyll/update/2015/02/18/welcome-to-jekyll.html">
+          <span class="posts--title">Welcome to Jekyll!</span>
+          <span class="posts--date">Feb 18, 2015</span>
+        </a>
       </li>
     
   </ul>
-
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
-
-</div>
+</section>
 
       </div>
     </div>
 
-    <footer class="site-footer">
+    <!-- <footer class="site-footer">
 
   <div class="wrapper">
 
-    <h2 class="footer-heading">Your awesome title</h2>
+    <h2 class="footer-heading">FooBar</h2>
 
     <div class="footer-col-wrapper">
       <div class="footer-col  footer-col-1">
         <ul class="contact-list">
-          <li>Your awesome title</li>
-          <li><a href="mailto:your-email@domain.com">your-email@domain.com</a></li>
+          <li>FooBar</li>
+          <li><a href="mailto:davide.parisi@gmx.com">davide.parisi@gmx.com</a></li>
         </ul>
       </div>
 
@@ -92,16 +110,16 @@
         <ul class="social-media-list">
           
           <li>
-            <a href="https://github.com/jekyll">
-              <span class="username">jekyll</span>
+            <a href="https://github.com/fadingblues">
+              <span class="username">fadingblues</span>
             </a>
           </li>
           
 
           
           <li>
-            <a href="https://twitter.com/jekyllrb">
-              <span class="username">jekyllrb</span>
+            <a href="https://twitter.com/fading_blues">
+              <span class="username">fading_blues</span>
             </a>
           </li>
           
@@ -109,15 +127,14 @@
       </div>
 
       <div class="footer-col  footer-col-3">
-        <p class="text">Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
-</p>
+        <p class="text">A Foo blog. Well, not so foo.</p>
       </div>
     </div>
 
   </div>
 
 </footer>
-
+ -->
 
   </body>
 

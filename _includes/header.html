@@ -1,8 +1,28 @@
-<header class="site-header">
+<div class="header">
+  <div class="header--profile-pic">
+    <img src="http://lorempixel.com/g/80/80/people" alt="Profile Picture">
+  </div>
+  <h1 class="header--title"><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
+  <div class="header--tagline">
+    <h3>{{ site.description }}</h3>
+  </div>
+  <ul class="header--nav">
+    {% for page in site.pages %}
+      {% if page.title %}
+      <li><a class="header--nav-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+      {% endif %}
+    {% endfor %}
+    <li><a class="header--nav-link" href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS</a></li>
+  </ul>
+</div>
+
+
+
+<!-- <header class="header">
 
   <div class="wrapper">
 
-    <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+    <h1><a class="brand" href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
 
     <nav class="site-nav">
       <a href="#" class="menu-icon">
@@ -20,4 +40,4 @@
 
   </div>
 
-</header>
+</header> -->

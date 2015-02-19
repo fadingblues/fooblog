@@ -1,4 +1,6 @@
 @charset "UTF-8";
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700);
+@import url(http://fonts.googleapis.com/css?family=Oleo+Script:400,700);
 /*------------------------------------*\
     INUIT.CSS
 \*------------------------------------*/
@@ -749,7 +751,8 @@ textarea:focus {
  * Extend the clearfix class with Sass to avoid the `.cf` class appearing over
  * and over in your markup.
  */
-.cf:after {
+.cf:after, .nav:after, .island:after,
+.islet:after {
   content: "";
   display: table;
   clear: both; }
@@ -819,7 +822,7 @@ ul, ol, dd {
     $MAIN
 \*------------------------------------*/
 html {
-  font: 1em/1.5 sans-serif;
+  font: 1em/1.5 "Roboto Slab", serif;
   overflow-y: scroll;
   min-height: 100%; }
 
@@ -1321,7 +1324,7 @@ td {
  */
 .table--bordered th,
 .table--bordered td {
-  border: 1px solid #ccc; }
+  border: 1px solid #EEE; }
   .table--bordered th:empty,
   .table--bordered td:empty {
     border: none; }
@@ -1506,6 +1509,400 @@ label,
 /**
  * Objects and abstractions
  */
+/*------------------------------------*\
+    $GRIDS
+\*------------------------------------*/
+/**
+ * Fluid and nestable grid system, e.g.:
+ *
+   <div class="grid">
+
+       <div class="grid__item  one-third">
+           <p>One third grid</p>
+       </div><!--
+
+    --><div class="grid__item  two-thirds">
+           <p>Two thirds grid</p>
+       </div><!--
+
+    --><div class="grid__item  one-half">
+           <p>One half grid</p>
+       </div><!--
+
+    --><div class="grid__item  one-quarter">
+           <p>One quarter grid</p>
+       </div><!--
+
+    --><div class="grid__item  one-quarter">
+           <p>One quarter grid</p>
+       </div>
+
+   </div>
+ *
+ * Demo: jsfiddle.net/inuitcss/CLYUC
+ *
+ */
+/**
+ * Grid wrapper
+ */
+.grid {
+  margin-left: -24px;
+  list-style: none;
+  margin-bottom: 0; }
+
+/**
+ * Very infrequently occuring grid wrappers as children of grid wrappers.
+ */
+.grid > .grid {
+  margin-left: 0; }
+
+/**
+ * Grid
+ */
+.grid__item {
+  display: inline-block;
+  width: 100%;
+  padding-left: 24px;
+  vertical-align: top; }
+
+/*------------------------------------*\
+    $NAV
+\*------------------------------------*/
+/**
+ * Nav abstraction as per: csswizardry.com/2011/09/the-nav-abstraction
+ * When used on an `ol` or `ul`, this class throws the list into horizontal mode
+ * e.g.:
+ *
+   <ul class=nav>
+       <li><a href=#>Home</a></li>
+       <li><a href=#>About</a></li>
+       <li><a href=#>Portfolio</a></li>
+       <li><a href=#>Contact</a></li>
+   </ul>
+ *
+ * Demo: jsfiddle.net/inuitcss/Vnph4
+ *
+ */
+.nav {
+  list-style: none;
+  margin-left: 0; }
+  .nav > li,
+  .nav > li > a {
+    display: inline-block;
+    *display: inline;
+    zoom: 1; }
+
+/**
+ * `.nav--stacked` extends `.nav` and throws the list into vertical mode, e.g.:
+ *
+   <ul class="nav  nav--stacked">
+       <li><a href=#>Home</a></li>
+       <li><a href=#>About</a></li>
+       <li><a href=#>Portfolio</a></li>
+       <li><a href=#>Contact</a></li>
+   </ul>
+ *
+ */
+.nav--stacked > li {
+  display: list-item; }
+  .nav--stacked > li > a {
+    display: block; }
+
+/**
+ * `.nav--banner` extends `.nav` and centres the list, e.g.:
+ *
+   <ul class="nav  nav--banner">
+       <li><a href=#>Home</a></li>
+       <li><a href=#>About</a></li>
+       <li><a href=#>Portfolio</a></li>
+       <li><a href=#>Contact</a></li>
+   </ul>
+ *
+ */
+.nav--banner {
+  text-align: center; }
+
+/**
+ * Give nav links a big, blocky hit area. Extends `.nav`, e.g.:
+ *
+   <ul class="nav  nav--block">
+       <li><a href=#>Home</a></li>
+       <li><a href=#>About</a></li>
+       <li><a href=#>Portfolio</a></li>
+       <li><a href=#>Contact</a></li>
+   </ul>
+ *
+ */
+.nav--block {
+  line-height: 1;
+  /**
+   * Remove whitespace caused by `inline-block`.
+   */
+  letter-spacing: -0.31em;
+  word-spacing: -0.43em;
+  white-space: nowrap; }
+  .nav--block > li {
+    letter-spacing: normal;
+    word-spacing: normal; }
+    .nav--block > li > a {
+      padding: 12px; }
+
+/**
+ * Force a nav to occupy 100% of the available width of its parent. Extends
+ * `.nav`, e.g.:
+ *
+   <ul class="nav  nav--fit">
+       <li><a href=#>Home</a></li>
+       <li><a href=#>About</a></li>
+       <li><a href=#>Portfolio</a></li>
+       <li><a href=#>Contact</a></li>
+   </ul>
+ *
+ * Thanks to @pimpl for this idea!
+ */
+.nav--fit {
+  display: table;
+  width: 100%; }
+  .nav--fit > li {
+    display: table-cell; }
+    .nav--fit > li > a {
+      display: block; }
+
+/**
+ * Make a list of keywords. Extends `.nav`, e.g.:
+ *
+   `<ul class="nav  nav--keywords>`
+ *
+ */
+.nav--keywords > li:after {
+  content: "\002C" "\00A0"; }
+.nav--keywords > li:last-child:after {
+  display: none; }
+
+/*------------------------------------*\
+    $ISLAND
+\*------------------------------------*/
+/**
+ * Simple, boxed off content, as per: csswizardry.com/2011/10/the-island-object
+ * E.g.:
+ *
+   <div class=island>
+       I am boxed off.
+   </div>
+ *
+ * Demo: jsfiddle.net/inuitcss/u8pV3
+ *
+ */
+.island,
+.islet {
+  display: block; }
+
+.island {
+  padding: 24px; }
+
+.island > :last-child,
+.islet > :last-child {
+  margin-bottom: 0; }
+
+/**
+ * Just like `.island`, only smaller.
+ */
+.islet {
+  padding: 12px; }
+
+/*------------------------------------*\
+    $BEAUTONS.CSS
+\*------------------------------------*/
+/**
+ * beautons is a beautifully simple button toolkit.
+ *
+ * LICENSE
+ * 
+ * Copyright 2013 Harry Roberts
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ * http://apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * 
+ */
+/*!*
+ * 
+ * @csswizardry -- csswizardry.com/beautons
+ * 
+ */
+/*------------------------------------*\
+    $BASE
+\*------------------------------------*/
+/**
+ * Base button styles.
+ *
+ * 1. Allow us to better style box model properties.
+ * 2. Line different sized buttons up a little nicer.
+ * 3. Stop buttons wrapping and looking broken.
+ * 4. Make buttons inherit font styles.
+ * 5. Force all elements using beautons to appear clickable.
+ * 6. Normalise box model styles.
+ * 7. If the button’s text is 1em, and the button is (3 * font-size) tall, then
+ *    there is 1em of space above and below that text. We therefore apply 1em
+ *    of space to the left and right, as padding, to keep consistent spacing.
+ * 8. Basic cosmetics for default buttons. Change or override at will.
+ * 9. Don’t allow buttons to have underlines; it kinda ruins the illusion.
+ */
+.btn {
+  display: inline-block;
+  /* [1] */
+  vertical-align: middle;
+  /* [2] */
+  white-space: nowrap;
+  /* [3] */
+  font-family: inherit;
+  /* [4] */
+  font-size: 100%;
+  /* [4] */
+  cursor: pointer;
+  /* [5] */
+  border: none;
+  /* [6] */
+  margin: 0;
+  /* [6] */
+  padding-top: 0;
+  /* [6] */
+  padding-bottom: 0;
+  /* [6] */
+  line-height: 3;
+  /* [7] */
+  padding-right: 1em;
+  /* [7] */
+  padding-left: 1em;
+  /* [7] */
+  border-radius: 4px;
+  /* [8] */ }
+
+.btn, .btn:hover {
+  text-decoration: none;
+  /* [9] */ }
+.btn:active, .btn:focus {
+  outline: none; }
+
+/*------------------------------------*\
+    $SIZES
+\*------------------------------------*/
+/**
+ * Button size modifiers.
+ *
+ * These all follow the same sizing rules as above; text is 1em, space around it
+ * remains uniform.
+ */
+.btn--small {
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+  line-height: 2; }
+
+.btn--large {
+  padding-right: 1.5em;
+  padding-left: 1.5em;
+  line-height: 4; }
+
+.btn--huge {
+  padding-right: 2em;
+  padding-left: 2em;
+  line-height: 5; }
+
+/**
+ * These buttons will fill the entirety of their container.
+ *
+ * 1. Remove padding so that widths and paddings don’t conflict.
+ */
+.btn--full {
+  width: 100%;
+  padding-right: 0;
+  /* [1] */
+  padding-left: 0;
+  /* [1] */
+  text-align: center; }
+
+/*------------------------------------*\
+    $FONT-SIZES
+\*------------------------------------*/
+/**
+ * Button font-size modifiers.
+ */
+.btn--alpha {
+  font-size: 3rem; }
+
+.btn--beta {
+  font-size: 2rem; }
+
+.btn--gamma {
+  font-size: 1rem; }
+
+/**
+ * Make the button inherit sizing from its parent.
+ */
+.btn--natural {
+  vertical-align: baseline;
+  font-size: inherit;
+  line-height: inherit;
+  padding-right: 0.5em;
+  padding-left: 0.5em; }
+
+/*------------------------------------*\
+    $FUNCTIONS
+\*------------------------------------*/
+/**
+ * Button function modifiers.
+ */
+/**
+ * Positive actions; e.g. sign in, purchase, submit, etc.
+ */
+.btn--positive {
+  background-color: #4A993E;
+  color: #fff; }
+
+/**
+ * Negative actions; e.g. close account, delete photo, remove friend, etc.
+ */
+.btn--negative {
+  background-color: #b33630;
+  color: #fff; }
+
+/**
+ * Inactive, disabled buttons.
+ * 
+ * 1. Make the button look like normal text when hovered.
+ */
+.btn--inactive,
+.btn--inactive:hover,
+.btn--inactive:active,
+.btn--inactive:focus {
+  background-color: #ddd;
+  color: #777;
+  cursor: text;
+  /* [1] */ }
+
+/*------------------------------------*\
+    $STYLES
+\*------------------------------------*/
+/**
+ * Button style modifiers.
+ *
+ * 1. Use an overly-large number to ensure completely rounded, pill-like ends.
+ */
+.btn--soft {
+  border-radius: 200px;
+  /* [1] */ }
+
+.btn--hard {
+  border-radius: 0; }
+
 /**
  * Style trumps; helper and brand classes
  */
@@ -2140,6 +2537,111 @@ label,
 /**
  * Push classes, to move grid items over to the right by certain amounts.
  */
+/**
+ * Whole
+ */
+.push--one-whole {
+  left: 100%; }
+
+/**
+ * Halves
+ */
+.push--one-half, .push--two-quarters, .push--three-sixths, .push--four-eighths, .push--five-tenths, .push--six-twelfths {
+  left: 50%; }
+
+/**
+ * Thirds
+ */
+.push--one-third, .push--two-sixths, .push--four-twelfths {
+  left: 33.333%; }
+
+.push--two-thirds, .push--four-sixths, .push--eight-twelfths {
+  left: 66.666%; }
+
+/**
+ * Quarters
+ */
+.push--one-quarter, .push--two-eighths, .push--three-twelfths {
+  left: 25%; }
+
+.push--three-quarters, .push--six-eighths, .push--nine-twelfths {
+  left: 75%; }
+
+/**
+ * Fifths
+ */
+.push--one-fifth, .push--two-tenths {
+  left: 20%; }
+
+.push--two-fifths, .push--four-tenths {
+  left: 40%; }
+
+.push--three-fifths, .push--six-tenths {
+  left: 60%; }
+
+.push--four-fifths, .push--eight-tenths {
+  left: 80%; }
+
+/**
+ * Sixths
+ */
+.push--one-sixth, .push--two-twelfths {
+  left: 16.666%; }
+
+.push--five-sixths, .push--ten-twelfths {
+  left: 83.333%; }
+
+/**
+ * Eighths
+ */
+.push--one-eighth {
+  left: 12.5%; }
+
+.push--three-eighths {
+  left: 37.5%; }
+
+.push--five-eighths {
+  left: 62.5%; }
+
+.push--seven-eighths {
+  left: 87.5%; }
+
+/**
+ * Tenths
+ */
+.push--one-tenth {
+  left: 10%; }
+
+.push--three-tenths {
+  left: 30%; }
+
+.push--seven-tenths {
+  left: 70%; }
+
+.push--nine-tenths {
+  left: 90%; }
+
+/**
+ * Twelfths
+ */
+.push--one-twelfth {
+  left: 8.333%; }
+
+.push--five-twelfths {
+  left: 41.666%; }
+
+.push--seven-twelfths {
+  left: 58.333%; }
+
+.push--eleven-twelfths {
+  left: 91.666%; }
+
+/**
+ * Not a particularly great selector, but the DRYest way to do things.
+ */
+[class*="push--"] {
+  position: relative; }
+
 /*------------------------------------*\
     $PULL
 \*------------------------------------*/
@@ -2155,14 +2657,14 @@ label,
  */
 .brand {
   font-family: Helvetica Neue, sans-serif!important;
-  color: #4a8ec2!important; }
+  color: #87A3BB!important; }
 
 .brand-face {
   font-family: Helvetica Neue, sans-serif!important; }
 
 .brand-color,
 .brand-colour {
-  color: #4a8ec2!important; }
+  color: #87A3BB!important; }
 
 /*------------------------------------*\
     $HELPER
@@ -2486,3 +2988,101 @@ label,
     position: absolute !important;
     width: 1px !important; } }
 /* endif */
+.posts {
+  margin-bottom: 24px; }
+
+.posts--title h3 {
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1; }
+
+.posts--list {
+  list-style: none;
+  margin-left: 0;
+  border-top-width: 1px; }
+  .posts--list li {
+    border: 0 solid #ccc;
+    border-bottom-width: 1px;
+    padding: 12px; }
+
+.header {
+  margin-bottom: 24px; }
+
+.header--profile-pic {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  margin-bottom: 12px; }
+  .header--profile-pic a {
+    display: block; }
+  .header--profile-pic img {
+    width: 80px;
+    height: 80px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
+    border-radius: 40px; }
+
+.header--title {
+  color: #B46565;
+  font-family: 'Oleo Script', sans-serif;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 6px; }
+  .header--title a,
+  .header--title a:focus,
+  .header--title a:hover {
+    color: #B46565;
+    text-decoration: none; }
+
+.header--tagline {
+  color: #666;
+  text-align: center; }
+  .header--tagline h3 {
+    font-size: 20px;
+    font-size: 1.2rem;
+    font-weight: 100;
+    line-height: 1; }
+
+.header--nav {
+  text-align: center;
+  font-weight: 700;
+  color: #B46565; }
+  .header--nav a {
+    text-decoration: none;
+    color: #B46565; }
+  .header--nav li::before {
+    content: " ~ "; }
+  .header--nav li:first-child::before {
+    content: ""; }
+
+.header--nav,
+.nav {
+  list-style: none;
+  margin-left: 0; }
+  .header--nav li,
+  .header--nav li > a,
+  .nav li,
+  .nav li > a {
+    display: inline-block;
+    *display: inline;
+    zoom: 1; }
+    .header--nav li :focus,
+    .header--nav li :hover,
+    .header--nav li > a :focus,
+    .header--nav li > a :hover,
+    .nav li :focus,
+    .nav li :hover,
+    .nav li > a :focus,
+    .nav li > a :hover {
+      text-decoration: none;
+      color: #FFAF38; }
+
+body {
+  max-width: 700px;
+  margin: 0 auto; }
+
+html {
+  padding: 20px;
+  padding-bottom: 0; }
