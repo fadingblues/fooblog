@@ -11,7 +11,7 @@
     "grunt-autoprefixer": "^2.2.0",
     "grunt-browser-sync": "^2.0.0",
     "grunt-contrib-copy": "*",
-    "grunt-contrib-uglify": "*",
+    "grunt-contrib-cssmin": "*",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-exec": "*",
     "grunt-jekyll": "^0.4.2",

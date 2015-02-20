@@ -12,6 +12,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. In laboriosam, dolorem
 <div>Laudantium saepe libero, placeat blanditiis animi debitis aspernatur vero temporibus, non perferendis aliquid nostrum distinctio enim consequuntur impedit voluptatem delectus est minus qui sit voluptate soluta nam velit? Expedita, et.</div>
 <div>Deserunt fugit aperiam quia corporis omnis similique animi ea reprehenderit ullam, ad repellat pariatur sint repudiandae dolore dolor error, sequi rem doloremque perferendis. Quibusdam officia, nisi id tempora. Perferendis, expedita.</div>
 
+
 {% highlight java%}
 public class DamselKnight extends Knight {
 	//TODO: implement this

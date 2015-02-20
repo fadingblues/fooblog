@@ -11,7 +11,8 @@ pre {
 }
 pre,
 pre>code {
-	font-size: 14px
+	font-size: 14px;
+	font-family: 'Inconsolata', monospace;
 }
 @media only screen and (min-width:481px) {
 	pre,
@@ -38,6 +39,7 @@ p>code::before {
 	background-color: #fdf6e3;
 	color: #586e75;
 	padding-left: .5em;
+	border-radius: 4px;
 }
 .highlight .c {
 	color: #93a1a1

@@ -11,6 +11,14 @@ module.exports = (grunt) ->
 			dist:
 				files:
 					'css/main.css': '_sass/main.scss'
+		# Minify CSS
+		cssmin:
+			# options:
+			# 	shorthandCompacting: true
+			# 	roundingPrecision: -1
+			target:
+				files:
+					'css/main.min.css': 'css/main.css'
 		# Watch for changes
 		watch:
 			sass:
@@ -20,6 +28,7 @@ module.exports = (grunt) ->
 				files: [
 					'_layouts/*.html',
 					'_includes/*.html',
+					'_posts/*.md',
 					'css/main.css',
 					'index.html'
 				]
@@ -38,5 +47,5 @@ module.exports = (grunt) ->
 				server:
 					baseDir: '_site'
 	# Register tasks
-	grunt.registerTask 'build', ['sass', 'jekyll']
+	grunt.registerTask 'build', ['sass', 'cssmin', 'jekyll']
 	grunt.registerTask 'default', ['build', 'browserSync', 'watch']

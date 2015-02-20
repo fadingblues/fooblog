@@ -5,8 +5,8 @@
     <description>A Foo blog. Well, not so foo.</description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 19 Feb 2015 18:07:50 +0100</pubDate>
-    <lastBuildDate>Thu, 19 Feb 2015 18:07:50 +0100</lastBuildDate>
+    <pubDate>Fri, 20 Feb 2015 13:43:17 +0100</pubDate>
+    <lastBuildDate>Fri, 20 Feb 2015 13:43:17 +0100</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -22,7 +22,13 @@
     
       <item>
         <title>Hello Worldbundle install</title>
-        <description>
+        <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit ex animi fugiat debitis, optio, eveniet deleniti laudantium. Labore porro distinctio, totam, maxime eius ullam voluptate eligendi nesciunt, sed, beatae aliquam.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;img--center img--round&quot; src=&quot;http://lorempixel.com/200/200/sports&quot; alt=&quot;Dummy&quot; /&gt;&lt;/p&gt;
+
+&lt;div&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse veritatis minus cupiditate, vel fugit est perferendis a atque ut non error, iste id accusamus in consequatur! Perferendis facere voluptate minus.&lt;/div&gt;
+&lt;div&gt;Incidunt ipsa, asperiores animi fuga nobis, unde. Quaerat dolor eius inventore eaque quod, blanditiis? Voluptatum adipisci magnam error, molestiae dolore numquam nulla aliquid aspernatur illum saepe! Ratione tenetur tempore accusamus!&lt;/div&gt;
+&lt;div&gt;Deserunt eaque quidem, rem a error unde praesentium voluptate eveniet, eum perferendis nesciunt assumenda, illum sed enim autem soluta! Magnam in, nemo labore libero corporis voluptas aut quas aspernatur laboriosam.&lt;/div&gt;
 </description>
         <pubDate>Thu, 19 Feb 2015 00:00:00 +0100</pubDate>
         <link>http://yourdomain.com/2015/02/19/hello-worldbundle-install.html</link>

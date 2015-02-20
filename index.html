@@ -6,9 +6,9 @@ layout: default
   <ul class="posts--list">
     {% for post in site.posts %}
       <li>
-        <a href="{{ post.url | prepend: site.baseurl }}">
-          <h3 class="posts--title">{{ post.title }}</h3>
-        </a>
+        <h3 class="posts--title">
+          <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h3>
         <div class="posts--date">{{ post.date | date: "%-d %B %Y" }}</div>
       </li>
     {% endfor %}

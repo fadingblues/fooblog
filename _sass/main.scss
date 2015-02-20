@@ -8,15 +8,20 @@
 @import "vendors/inuitcss/inuit";
 @import "posts";
 @import "header";
+@import "footer";
 
 body{
 	max-width: 700px;
 	margin: 0 auto;
+	background: #F9F8E9;
 }
 
 html {
 	padding: 20px;
 	padding-bottom: 0;
+	border-top-width: 2px;
+	border-top-style: solid;
+	border-top-color: $main--typography-color;
 }
 
 a {
@@ -27,3 +32,38 @@ a {
 	}
 }
 
+img {
+	border: 0;
+	max-width: 100%;
+	[height],
+	[width] {
+		max-width: none;
+	}
+}
+
+.img--round {
+	border-radius: 4px;
+}
+
+.img--right {
+	float: right;
+	margin-bottom: 24px;
+	margin-left: 24px;
+}
+
+.img--left {
+	float: left;
+	margin-bottom: 24px;
+	margin-right: 24px;
+}
+
+.img--center {
+	display: block;
+	margin-right: auto;
+	margin-bottom: 24px;
+	margin-left: auto;
+}
+
+.highlight {
+	margin-top: 24px;
+}
